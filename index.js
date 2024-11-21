@@ -168,10 +168,11 @@ import fs from 'fs';
 
 puppeteer.use(stealthPlugin())
 
+
 const customDelay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
  puppeteer.launch({ headless: false} ).then(async browser => {
     const page = await browser.newPage()
-    await page.goto(url10, { timeout: 60000000 })
+    await page.goto(url156, { timeout: 60000 })
     // await page.setViewport({ width: 1280, height: 800 });
     // await page.waitFor(5000)
     // await page.waitForSelector('.tw-mb-2');
@@ -181,7 +182,7 @@ const customDelay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
         await page.evaluate(() => {
             window.scrollBy(1000, 0);
         });
-        await customDelay(7000)
+        await customDelay(6000)
         // await page.waitForTimeout(20000); // Wait for products to load
      
     }
